@@ -1,0 +1,20 @@
+PODS:
+  - ElegantTableView (0.0.3)
+  - MBProgressHUD (1.2.0)
+
+DEPENDENCIES:
+  - ElegantTableView
+  - MBProgressHUD (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - ElegantTableView
+    - MBProgressHUD
+
+SPEC CHECKSUMS:
+  ElegantTableView: 95e37428e31235a9851acdc6fd0cde24231e9737
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+
+PODFILE CHECKSUM: 3e7f5a8fc537ba01095e8359f9b83216800a558b
+
+COCOAPODS: 1.9.0

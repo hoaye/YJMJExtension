@@ -1,42 +1,27 @@
-#
-# Be sure to run `pod lib lint YJMJExtension.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'YJMJExtension'
-  s.version          = '3.2.2'
-  s.summary          = 'A short description of YJMJExtension.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.name         = "YJMJExtension"
+  s.version      = "3.2.2"
+  s.summary      = "MJExtension 静态库"
+  s.homepage     = "https://github.com/monetking/YJMJExtension"
+  s.license      = "MIT"
 
-  s.description      = <<-DESC
-  YJMJExtension 是 MJExtension 3.2.2 版本静态库
-                       DESC
+  s.authors      = { 'monetking' => 'houmanager@qq.com' }
 
-  s.homepage         = 'https://github.com/monetking/YJMJExtension'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'monetking' => 'houmanager@qq.com' }
-  s.source           = { :git => 'https://github.com/monetking/YJMJExtension.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.platform     = :ios, "8.0"
+  s.source       = { :git => "https://github.com/monetking/YJMJExtension.git", :tag => s.version }
+  s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
+  s.dependency 'MBProgressHUD', '~> 1.0'
+  s.source_files = "YJMJExtension_librarys/Headers/*.{h,m}"
+  s.prefix_header_contents = <<-EOS
+  #ifdef __OBJC__
 
-  s.source_files = 'YJMJExtension/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'YJMJExtension' => ['YJMJExtension/Assets/*.png']
-  # }
+  #import <Foundation/Foundation.h>
+  #import <UIKit/UIKit.h>
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  #endif
+  EOS
+  s.vendored_libraries = 'YJMJExtension_librarys/**.a'
+
 end

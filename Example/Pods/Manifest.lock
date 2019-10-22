@@ -1,0 +1,16 @@
+PODS:
+  - YJMJExtension (0.1.0)
+
+DEPENDENCIES:
+  - YJMJExtension (from `../`)
+
+EXTERNAL SOURCES:
+  YJMJExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YJMJExtension: b859bac7820e393104b62ff8aa5b9b033ec7b2e8
+
+PODFILE CHECKSUM: 8b273f1430e306865372585b4f1496539b18a4a2
+
+COCOAPODS: 1.9.0
